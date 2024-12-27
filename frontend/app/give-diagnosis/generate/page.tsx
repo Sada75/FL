@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Loading from "@/app/components/Loading";
+// import Loading from "@/app/components/Loading";
 
 const patientInfoMock = {
   patient_name: "John Doe",
@@ -32,22 +32,22 @@ type PatientInfo = {
 
 const PatientInfoComponent: React.FC = () => {
   const [patientInfo, setPatientInfo] = useState<PatientInfo>(patientInfoMock);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const patient = JSON.parse(localStorage.getItem("patient") || "");
     setPatientInfo(patient);
   }, []);
 
-  const fetchPatientInfo = () => {
-    // api call
-    setLoading(false);
-  };
+  // const fetchPatientInfo = () => {
+  //   // api call
+  //   setLoading(false);
+  // };
 
   const [medicines, setMedicines] = useState("");
   const [list, setList] = useState<string[]>([]);
 
-  if (loading) <Loading />;
+  // if (loading) <Loading />;
 
   return (
     <div
@@ -64,7 +64,7 @@ const PatientInfoComponent: React.FC = () => {
           <h1 className="text-2xl font-bold text-gray-800">
             Patient Information
           </h1>
-          <p className="text-gray-600">Overview of patient's medical data</p>
+          <p className="text-gray-600">Overview of patient&apos;s medical data</p>
         </div>
 
         {/* Patient Details */}

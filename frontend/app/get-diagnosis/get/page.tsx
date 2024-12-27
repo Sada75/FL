@@ -3,7 +3,7 @@ import Loading from "@/app/components/Loading";
 import React, { useEffect, useState } from "react";
 import { clearContext, converseWithAI } from "@/app/actions/getResponse";
 
-const page = () => {
+const Page = () => {
   const [loading, setLoading] = useState(false);
   const [question, setQuestion] = useState("Hi what problem are u facing");
   const [answer, setAnswer] = useState("");
@@ -77,4 +77,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

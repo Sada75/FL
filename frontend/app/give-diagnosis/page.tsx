@@ -137,15 +137,15 @@ const DoctorDashboard = () => {
     },
   ];
 
-  function generateDiagnosis() {}
+  // function generateDiagnosis() {}
 
   // Function to handle button click
-  const handleGenerateDiagnosis = (diagnosis: any) => {
-    alert(
-      `Generating diagnosis for ${diagnosis.patientName} (${diagnosis.disease})`
-    );
-    // Add your custom logic here
-  };
+  // const handleGenerateDiagnosis = (diagnosis: any) => {
+  //   alert(
+  //     `Generating diagnosis for ${diagnosis.patientName} (${diagnosis.disease})`
+  //   );
+  //   // Add your custom logic here
+  // };
   const router = useRouter();
   useEffect(() => {
     if (!localStorage.getItem("doctor")) {
