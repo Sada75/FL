@@ -165,7 +165,7 @@ const DoctorDashboard = () => {
   return (
     <div
       style={{
-        backgroundImage: 'url("/bg-doctor.png")',
+        backgroundImage: 'url("/new.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
