@@ -28,20 +28,23 @@ const Page = () => {
 
   return (
     <div
+      className="flex flex-col items-center justify-center h-screen px-72"
       style={{
-        backgroundImage: 'url("/bg-doctor.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "relative",
+        width : "100%",
+        height : "100vh",
+        overflow: "hidden",
       }}
-      className="flex justify-center items-center min-h-screen bg-gray-100"
     >
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">Register Doctor</h1>
+      <video src="./BV2.mp4" autoPlay loop muted style={{position : "absolute", width : "100%", height : "100vh" , objectFit : "cover", zIndex : -1}}></video>
+    
+      <div className="bg-gradient-to-l from-yellow-400 to-orange-500 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 className="text-2xl font-bold mb-6 text-center text-white">Register Doctor</h1>
         <form onSubmit={regDoc}>
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-white font-medium mb-2"
             >
               Name:
             </label>
@@ -58,7 +61,7 @@ const Page = () => {
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-white font-medium mb-2"
             >
               Email:
             </label>
@@ -75,7 +78,7 @@ const Page = () => {
           <div className="mb-4">
             <label
               htmlFor="specialization"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-white font-medium mb-2"
             >
               Specialization:
             </label>
@@ -92,7 +95,7 @@ const Page = () => {
           <div className="mb-4">
             <label
               htmlFor="phone"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-white font-medium mb-2"
             >
               Phone:
             </label>
@@ -115,6 +118,7 @@ const Page = () => {
         </form>
       </div>
     </div>
+    
   );
 };
 

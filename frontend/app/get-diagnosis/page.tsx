@@ -6,14 +6,17 @@ const GetDiagnosisPage: React.FC = () => {
   const router = useRouter();
   return (
     <div
+      className="flex flex-col items-center justify-center h-screen px-72"
       style={{
-        backgroundImage: 'url("/bg-patient.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "relative",
+        width : "100%",
+        height : "100vh",
+        overflow: "hidden",
       }}
-      className="flex flex-col items-center justify-center h-screen"
     >
-      <div className="text-black bg-white flex flex-col p-8 rounded-xl items-center">
+      <video src="./BV2.mp4" autoPlay loop muted style={{position : "absolute", width : "100%", height : "100vh" , objectFit : "cover", zIndex : -1}}></video>
+    
+      <div className="text-black bg-yellow-200 flex flex-col p-8 rounded-xl items-center">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-semibold mb-4">
             Welcome to the Health Portal
@@ -38,6 +41,7 @@ const GetDiagnosisPage: React.FC = () => {
         </div>
       </div>
     </div>
+   
   );
 };
 

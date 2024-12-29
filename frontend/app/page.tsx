@@ -1,6 +1,8 @@
 "use client"
 
 import { useRouter } from "next/navigation";
+// import { relative } from "path";
+// import BV from "../public/BV.mp4";
 
 export default function Home() {
   const router = useRouter();
@@ -17,11 +19,13 @@ export default function Home() {
     <div
       className="flex flex-col items-center justify-center h-screen px-72"
       style={{
-        backgroundImage: 'url("/bg-patient.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "relative",
+        width : "100%",
+        height : "100vh",
+        overflow: "hidden",
       }}
     >
+      <video src="./BV.mp4" autoPlay loop muted style={{position : "absolute", width : "100%", height : "100vh" , objectFit : "cover", zIndex : -1}}></video>
     <div style={{ 
       display: "flex", 
       justifyContent: "center", 
@@ -32,7 +36,7 @@ export default function Home() {
     }}>
       <div style={{ 
         textAlign: "center",
-        backgroundColor: "white",
+        backgroundColor: "#fef3c7",
         padding: "3rem 4rem",
         borderRadius: "15px",
         boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
@@ -63,6 +67,7 @@ export default function Home() {
           //   justifyContent: "center",
           //   gap: "2rem"
           // }
+        
         }}>
           <button
             onClick={() => handleSelection("doctor")}
