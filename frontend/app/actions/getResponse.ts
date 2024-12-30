@@ -24,7 +24,7 @@ export async function clearContext() {
   when you are confident about the diagnosis. The summary should include:
   SUMMARY: The top three possible diseases the patient might have, based on the symptoms and probabilities.
   A detailed list of symptoms the patient reported.
-  If you are unsure, ask further questions to gather more information before generating a conclusion. make sure to keep the questions small. the question should not be more than three sentences`,
+  If you are unsure, ask further questions to gather more information before generating a conclusion.please keep the questions simple and short.`,
     },
     {
       role: "system",
