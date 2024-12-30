@@ -5,7 +5,7 @@ import { clearContext, converseWithAI } from "@/app/actions/getResponse";
 
 const Page = () => {
   const [loading, setLoading] = useState(false);
-  const [question, setQuestion] = useState("Hi what problem are u facing");
+  const [question, setQuestion] = useState("Hi what problem are you facing");
   const [answer, setAnswer] = useState("");
   const [done, setDone] = useState(false);
 
@@ -34,11 +34,13 @@ const Page = () => {
     <div
       className="flex flex-col items-center justify-center h-screen px-72"
       style={{
-        backgroundImage: 'url("/bg-patient.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "relative",
+        width : "100%",
+        height : "100vh",
+        overflow: "hidden",
       }}
     >
+      <video src="../../BV2.mp4" autoPlay loop muted style={{position : "absolute", width : "100%", height : "100vh" , objectFit : "cover", zIndex : -1}}></video>
       <div className="flex flex-col p-8 bg-white min-w-[300px] min-h-[200px] justify-center shadow-lg rounded-xl">
         {loading ? (
           <Loading />
@@ -60,7 +62,7 @@ const Page = () => {
                   name="patientName"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
-                  className="p-3 text-lg w-full mb-5 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="p-3 text-lg w-full mb-5 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 "
                 />
                 <button
                   onClick={res}
